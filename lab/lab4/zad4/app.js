@@ -9,11 +9,23 @@ app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
+let students = [];
+let nextId = 1;
 
 app.get('/', studentsController.getAddNewStudentPage);
 app.post('/add-student', studentsController.addNewStudent);
 app.get('/success', studentsController.getAddingNewStudentSuccessPage);
 app.get('/students-list', studentsController.getStudentsListPage);
+
+app.use((req, res, next) => {
+  res.locals.pageTitle = 'Express App'; 
+  next();
+});
+
+app.use((req, res, next) => {
+  res.locals.navigation = 'partials/navigation'; 
+  next();
+});
 
 app.get('/', (req, res) => {
   res.render('Home', { title: 'Home' });
