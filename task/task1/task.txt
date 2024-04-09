@@ -1,0 +1,52 @@
+/*
+  Zadanie 1:
+    - Napisz konstruktor Airplane, który inicjalizuje `name` na podstawie argumentu.
+    - Wszystkie samoloty stworzone za pomocą Airplane powinny być inicjalizowane z `isFlying` ustawionym na false.
+    - Nadaj samolotom możliwość `.takeOff()` i `.land()`:
+        + Jeśli samolot wystartuje, jego właściwość `isFlying` jest ustawiona na true.
+        + Jeśli samolot wyląduje, jego właściwość `isFlying` jest ustawiona na false.
+*/
+
+/*
+  Zadanie 2
+    - Napisz konstruktor Person, który inicjalizuje `name` i `age` z argumentów.
+    - Wszystkie instancje Person powinny być inicjalizowane z pustą tablicą `stomach`.
+    - Nadaj instancjom Person możliwość `.eat("someFood")`:
+        + Podczas jedzenia jadalnego produktu, powinien on zostać dodany do `stomach`.
+        + Metoda `eat` nie powinna mieć efektu, jeśli w `stomach` znajduje się 10 przedmiotów.
+    - Nadaj instancjom Person możliwość `.poop()`:
+        + Gdy instancja załatwi się, jej `stomach` powinien opróżnić się.
+    - Nadaj instancjom Person metodę `.toString()`:
+        + Powinna zwracać ciąg znaków z `name` i `age`. Przykład: "Mary, 50"
+*/
+
+/*
+  Zadanie 3
+    - Napisz konstruktor Car, który inicjalizuje `model` i `milesPerGallon` z argumentów.
+    - Wszystkie instancje stworzone za pomocą Car:
+        + powinny być inicjalizowane z `tank` na 0
+        + powinny być inicjalizowane z `odometer` na 0
+    - Nadaj samochodom możliwość tankowania za pomocą metody `.fill(gallons)`. Dodaj galony do `tank`.
+    - ROZSZERZENIE: Nadaj samochodom możliwość jazdy `.drive(distance)`. Przejechany dystans:
+        + Powinien zwiększyć `odometer`.
+        + Powinien zmniejszyć `tank`, biorąc pod uwagę `milesPerGallon`.
+    - ROZSZERZENIE: Samochód, który skończy paliwo podczas jazdy, nie może przejechać więcej dystansu:
+        + Metoda `drive` powinna zwrócić napis "I ran out of fuel at x miles!" gdzie x to `odometer`.
+*/
+
+/*
+  Zadanie 4
+    - Napisz konstruktor Baby, który jest podklasą Person.
+    - Oprócz `name` i `age`, Baby przyjmuje trzeci argument do inicjalizacji `favoriteToy`.
+    - Oprócz metod w Person.prototype, niemowlęta mają możliwość `.play()`:
+        + Powinno zwrócić ciąg znaków "Playing with x", gdzie x to ulubiona zabawka.
+*/
+
+/*
+  Zadanie 5
+    - Napisz konstruktor Bicycle, który inicjalizuje `type` i `gear` z argumentów.
+    - Wszystkie instancje stworzone za pomocą Bicycle powinny być inicjalizowane z `speed` ustawionym na 0.
+    - Nadaj rowerom możliwość zmiany biegów za pomocą metody `.changeGear(newGear)`, która aktualizuje bieg roweru.
+    - Dodaj metodę `.pedal()`, która zwiększa prędkość w zależności od aktualnego biegu. Dla uproszczenia przyjmijmy, że każdy bieg zwiększa prędkość o 5 jednostek.
+    - Zawrzyj metodę `.brake()`, która zmniejsza prędkość o 5 jednostek za każdym użyciem, ale prędkość nie powinna spaść poniżej 0.
+*/
